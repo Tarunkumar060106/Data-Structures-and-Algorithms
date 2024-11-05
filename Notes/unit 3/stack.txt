@@ -1,0 +1,53 @@
+DSA UNIT 3
+
+Stack ADT
+1. Works on LIFO or FILO principle
+2. ex: plates on top of each other
+3. ie. the plates at top are removed first and the bottom plates stay the longest
+4. Always new items are added to the top
+5. Entry and Exit is the same point
+6. Linear Data Structure
+7. Two Primary Operation:
+    -> push()
+        -> pushes elements into the stack
+        -> stack full == Stack Overflow
+    -> pop()
+        -> pops/removes elements from stack in descending order
+        -> stack empty == Stack Undeflow
+8. Additional Functionality:
+    -> peek() or top()
+        -> view the top element without removing it from the Stack
+    -> isFull
+        -> check if stack is full
+    -> isEmpty
+        -> check if stack is empty
+
+STACK IMPLENTATION - ARRAY
+
+i. 1-D array is enough to implent stack
+ii. array size is always fixed
+iii. easy to implement
+
+> Stack top
+- initialize value of top is -1
+- to insert, increment the top by 1 and then insert
+- to delete, delete the top and decrement by 1
+
+> Push(value)
+- check whether the stack is full based on top == Size-1
+- if full print error msg
+- if not full, then increment top by 1 and set stack[top] = value;
+
+> Pop(value)
+- check whether the stack is empty based on top == -1
+- if empty print stack is empty
+- else delete stack[top] then decerment top=top-1
+
+> Display(value)
+- check if stack is empty based on top == -1
+- if empty print error
+- else disply the elements in decreasing order
+
+> Cons of ARRAY
+- size is fixed at starting of implementation
+- if more memory or less memory is required then it is not able to change
