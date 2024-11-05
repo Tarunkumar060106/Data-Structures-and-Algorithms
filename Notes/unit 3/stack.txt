@@ -51,3 +51,8 @@ iii. easy to implement
 > Cons of ARRAY
 - size is fixed at starting of implementation
 - if more memory or less memory is required then it is not able to change
+
+
+STACK IMPLENTATION - LINKED LIST
+
+
