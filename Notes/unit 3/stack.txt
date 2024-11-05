@@ -60,8 +60,35 @@ ii. nodes are scattered and non-contigious
 iii. each node contains pointer to immediate successor node
 iV. overflown if space in heap is not enough to create node
 
-Create Node - linked list
+> Create Node - linked list
 - include all header files
 - define a "Node" struct with members data and next
 - define a "Node" pointer top and set it to NULL
 - implement main method with operations and suitable function calls
+
+> push(value)
+- create a newNode with given value
+- check if empty with top == NULL
+- if empty newNode->next = NULL
+- if not empty newNode->next = top
+- set top = newNode
+
+> pop()
+- check if empty
+- if empty then terminate
+- if not empty define Node pointer temp and set temp = top
+- then top = top->next
+- free(temp)
+
+> display()
+- check if empty
+- if empty error
+- not empty, node pointer temp and initialize with top
+- temp->data--> 
+- temp->next != NULL
+- repeats till reaches first node
+- display temp->data-->NULL
+
+> Pros Linked list
+- varying size of data
+- no need to fix size at beginning of the implementation
