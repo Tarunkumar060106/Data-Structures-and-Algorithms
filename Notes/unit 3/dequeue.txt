@@ -1,0 +1,77 @@
+DEQUEUE
+
+i. Elements can be added and removed from both ends of the queue
+ii. generalized version of linear queue where insertion and deletion can happen at both ends
+
+> Properties
+- LIFO
+- FIFO
+
+>Types
+- Input restricted
+    -> two outputs and 1 input
+- Output restricted
+    -> two inputs and 1 output
+
+> Operations
+- Insertion at front
+if(Front == 0){
+    print()
+}
+else if(front == -1){
+    front = front + 1
+    rear = rear + 1
+    dq[front] = x
+}
+else{
+    front = front + 1
+    dq[front] = x
+}
+
+- Insertion at rear
+if(rear = size-1){
+    print()
+}
+else if(rear == -1){
+    front = front + 1
+    rear = rear + 1
+    dq[rear] = x
+}
+else{
+    rear = rear + 1
+    dq[rear] = x
+}
+
+- Deletion at front
+if(front == -1){
+    print
+}
+else if(front == rear){
+    x = dq[front]
+    front = -1
+    rear = -1
+}
+else{
+    x = dq[front]
+    front = front + 1
+}
+
+- Deletion at rear
+if(rear == -1){
+    print()
+}
+else if(front == rear){
+    x = dq[rear]
+    front = -1
+    rear = -1
+}
+else{
+    x = dq[rear]
+    rear = rear - 1
+}
+
+> Application of DE-queue
+- palindrome checker
+- A-steal job scheduling algorithm
+- undo-redo operations
+- storing web-browser history

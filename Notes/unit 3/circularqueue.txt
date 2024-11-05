@@ -1,0 +1,70 @@
+CIRCULAR QUEUE
+
+i. variation of traditional linear queue where last element connects back to the first element forming a circle
+ii. ensures continuos use of memory, and efficient space ultilization
+iii. front and rear pointers wrap around array allowing us to dequeue from front and enqueue from rear
+
+Need for Circular Queue
+- in standard linear queue there is limitation on the reusability of free spaces after dequeueing elements
+- c-queue allows efficient memory usage
+
+Operations
+> enqueue
+> dequeue
+> front
+> rear
+> isEmpty
+> isFull
+
+Implementation
+
+CircularQueue:
+    max
+    queue
+    front
+    rear
+
+CircularQueue(max){
+    max = max
+    queue = [None] * max
+    front = rear = -1
+}
+
+isEmpty(){
+    return front == -1
+}
+isFull(){
+    return (rear+1)%max == front
+}
+
+Enqueue(data){
+    if isFull():
+        return full
+    
+    if isEmpty():
+        return rear = front = 0
+
+    else:
+        rear = (rear+1)%max
+        queue[rear] = data
+}
+
+dequeue():
+    if isEmpty():
+        return empty
+    
+    data = queue[front]
+    if front == rear:
+        front = rear = -1
+    else:
+        front = (front+1)%max
+        return data
+
+> Advantages
+i. Efficient Memory usage
+ii. Simplicity in Implementation
+iii. continuos data flow
+
+> Application
+i. Printer Spooling
+ii. CPU scheduling

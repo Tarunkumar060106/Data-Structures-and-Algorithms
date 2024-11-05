@@ -1,0 +1,85 @@
+QUEUE ADT
+i. queue is a data structure that enforces fcfs or fifo order
+ii. element is inserted first is first to be deleted
+iii. push() is called enqueue - to push items
+iv. pop is called dequeue - to pop items
+v. has front and rear
+
+> Operations
+i. enqueue(item)
+ii. dequeue()
+iii. getHead()
+iv. getTail()
+v. isEmpty()
+vi. size()
+
+Array Implementation of Queue
+
+> enqueue(value)
+{
+    if(rear == SIZE-1){
+        print Stack Overflow
+    }
+    else{
+        if(front == -1){
+            front = 0
+            rear++
+            queue[rear] = value
+        }
+    }
+}
+
+> dequeue()
+{
+    if(front == rear){
+        print Stack Undeflow
+    }
+    else{
+        if(front == rear){
+            front = rear = -1
+        }
+    }
+}
+
+> display(){
+    if front == rear{
+        Stack Undeflow
+    }
+    else{
+        int i;
+        for(i=front; i<=rear; i++){
+            print queue[i]
+        }
+    }
+}
+
+> Cons
+i. multiple enqueue and dequeue lead to fragmentation
+ii. workaround - circular queue, shifting elements after each dequeue
+
+Linked List Implementation of Queue
+
+> enqueue(value){
+    newNode ptr;
+    ptr->data = value;
+    if(front == NULL){
+        front = rear = ptr;
+        front->next = rear->next = NULL
+    }
+    else{
+        rear->next = ptr
+        rear = ptr
+        rear->next = NULL
+    }
+}
+
+> dequeue(value){
+    if(front == null){
+        underflow
+    }
+    else{
+        ptr = front
+        front = front->next
+        free(ptr)
+    }
+}

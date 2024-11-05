@@ -1,0 +1,31 @@
+Opndstk = the empty stack;
+
+/* scan the input string */
+
+/* element at a time into symb */
+
+While(not end of input)
+
+symb = next imput character;
+
+if(symb is an operand)
+
+push(opnstk,symb);
+
+else{
+
+/* symb is an operator */
+
+opnd2= pop(opndstk);
+
+opnd1=pop(opndstk);
+
+value=result of applying symb to opnd1 and opnd2;
+
+push(opndstk,value);
+
+} /* end else */
+
+} /* end while */
+
+Return(opndstk);
