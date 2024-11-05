@@ -55,4 +55,13 @@ iii. easy to implement
 
 STACK IMPLENTATION - LINKED LIST
 
+i. linked-list used to dynamic allocation of memory for varying size of Data
+ii. nodes are scattered and non-contigious
+iii. each node contains pointer to immediate successor node
+iV. overflown if space in heap is not enough to create node
 
+Create Node - linked list
+- include all header files
+- define a "Node" struct with members data and next
+- define a "Node" pointer top and set it to NULL
+- implement main method with operations and suitable function calls
