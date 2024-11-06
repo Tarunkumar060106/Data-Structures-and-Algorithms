@@ -1,0 +1,73 @@
+TREE TRAVERSAL
+
+- process of visiting each node in a tree exactly once
+
+Type
+> DFS
+    -> PreOrder
+    -> InOrder
+    -> PostOrder
+> BFS
+
+> PreOrder
+- algorithm
+    i. visit the root
+    ii. traverse left subtree ie, preOrder(left subtree)
+    iii. traverse right subtree ie, preOrder(right subtree)
+    Root -> Left -> Right
+    Fully finishes the left subtree and then comes to the right
+
+- application 
+    i. prefix expression of tree
+    ii. making copy of tree
+
+>> Depth First Search
+> InOrder
+- algorithm
+    i. traverse the left subtree
+    ii. visit root
+    iii. traverse the right subtree
+    Left -> Root -> Right
+
+- application
+    i. infix expression of tree
+
+> PostOrder
+- algorithm
+    i. traverse the left subtree
+    ii. traverse the right subtree
+    iii. visit root
+    Left -> Right -> Root
+
+- application
+    i. postfix expression of the tree
+    ii. used to delete the tree as it visits the children first then the parent
+
+>> Breadth First Search
+- also called as level order traversal
+- prints the tree data as is stored in the array rep of complete binary tree
+
+>> BINARY SEARCH TREE
+
+> What is binary tree
+- a binary tree is a type of tree ds in which each node can have atmost 2 children
+
+> Types
+- Full Binary Tree
+    i. each node has exactly 0 or 2 children
+    ii. height of node in bt is the largest no of edges in a path
+    iii. depth is the total no. of edges from the root node to target node
+
+- Complete Binary Tree
+    i. is a bt in which all levels are completely filled except the last layer
+    ii. in last level, the nodes must be filled strictly from left to right
+
+>> Binary Search Tree
+- left node of parent node is less than value of parent and the right node of parent is greater than the value of parent
+
+> Operations
+- Insert, Search, Delete
+
+study algorithm
+
+    

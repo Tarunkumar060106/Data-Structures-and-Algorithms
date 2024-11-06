@@ -1,0 +1,97 @@
+UNIT-4 TREE
+
+- tree is a non-linear ds which organizes data in a hierarchical structure and this is a recursive definition
+- tree is a connected graph without any circuits
+
+> Properties of True
+- one and only path between every pair of vertices
+- tree has exactly n-1 edges
+- a graph is a tree if it is minimally connected
+- any connected graph with n vertices and n-1 edges is a tree
+
+> Terminology of Tree
+- Root
+    i. first node where the tree starts
+    ii. only one root per tree
+    iii. never multiple root node
+
+- Edge
+    i. the connecting link between any 2 nodes
+    ii. exactly n-1 edges
+
+- Parent 
+    i. the node with a branch from it to any other node
+    ii. parent can have 1 or more child nodes
+
+- Child 
+    i. the node which is a descendant of some node
+    ii. all nodes except root node is child
+
+- Siblings 
+    i. nodes which belong to same Parent
+
+- Degree 
+    i. it is the no. of child of that node
+    ii. degree of tree is the highest degree of a node among all nodes of tree
+
+- Internal Node 
+    i. node with atleast 1 child
+    ii. also called non-terminal node
+    iii. every non-leaf node is a terminal node
+
+- Leaf Node 
+    i. the node which does not have any child
+    ii. also called external node or terminal node
+
+- Level 
+    i. each step from the root from top to bottom
+    ii. starts at 0 and increments by 1
+
+- Height 
+    i. total number of edges from the longest path from any leaf node to a particular node
+    ii. height of tree is height of root node
+    iii. height of all leaf node = 0
+
+- Depth 
+    i. total no. of edges from root to a particular node
+    ii. depth of root = 0
+    iii. depth of tree is the path from root to a leaf node in the longest path
+    iv. level and depth are interchangeable
+
+- Subtree
+    i. each child from a node is recursively forming a Subtree
+    ii. every child node forms a subtree on its parent node
+
+BINARY TREE
+- special tree ds in which each node can have atmost 2 children
+- either 0, 1, or 2 child only
+
+> unlabeled binary tree
+- bt (binary tree) is unlabeled if nodes are not assigned any label
+- no of different bt with n unlabeled node = 2n C n / n+1
+
+> labeled bt
+- bt is labeled if all nodes are assigned a label
+- ( 2n C n / n+1 ) x n!
+
+> TYPES OF BT 
+- rooted bt
+    i. root node
+    ii. at most 2 children
+
+- full/strictly bt
+    i. every node has either 0 or 2 children
+    ii. full bt also called strictly bt
+
+- complete/perfect bt
+    i. every internal node has exactly 2 children
+    ii. all leaf node are at same level
+
+- almost complete bt
+    i. all levels are completely filled except possibly last level
+    ii. filled from left to right strictly
+
+- skewed bt
+    i. all node except one node has one and only one child
+    ii. the remaining node has no child
+    iii. depth is (n-1)

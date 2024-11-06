@@ -1,0 +1,94 @@
+GRAPHS
+
+> What is graph
+- a ds that has a set of nodes called vertices connected together by edges
+- the edges determine the relationship among vertices
+
+> Types of graph
+- Directed
+    i. edges have direction
+- Undirected
+    i. edges done have direction
+
+> Graph Terminology
+- Cyclic
+    i. contains atleast 1 cycle, it is considered cyclic
+- Acyclic
+    i. no cycles are present
+- Weighted
+    i. when the edges has a value or represent the cost of traversing that edge
+- Degree
+    i. no of edges that incident on a vertex is called Degree
+    ii. out degree = no. of edges leaving the vertex
+    iii. in degree = no. of edges eneterting the vertex
+
+>> GRAPH IMPLEMENTATION 
+> Two common ways to represent
+- Adjacency Matrix
+- Adjacency List
+
+> Adjacency Matrix
+[
+    A   B   C   D  
+A   0   1   1   0
+B   1   0   0   1
+C   1   1   1   1
+D   0   1   0   1
+                    ] - undirected graph
+
+Similar For directed, except that only the edge that is leaving from the vertex is marked as 1
+
+> Linked List
+- 1D array is used to represent the vertices
+- A list used for each vertex that contain the adjacent vertices which are adjacent from adjacent list
+
+0 -> 1 -> 2 -> NULL            1 ___ 2
+1 -> 0 -> 2 -> NULL             \   /
+2 -> 0 -> 1 -> NULL               0
+
+0 ->                           1 --> 2
+1 -> 0 -> 2 -> NULL             \> </
+2 -> 0 -> NULL                    0
+
+> Pros and Cons 
+- Matrix
+    i. easy to implement 
+    ii. easy and fast to tell a pair is an edge, just look at Matrix[i][j]
+
+    -i. matrix take O(n^2) no matter how many edges
+
+- List
+    i. saves space
+    
+    -i. O(n) to determine edge or not
+    -ii. to search entire list the time becomes proportional to length of list[i]
+
+>> Dijkstra Algortihm
+- used to find the shortest distance from a starting node to all other nodes in a Weighted non-negative edge graph
+- unsures that the shortest path is found from source correctly
+- uses priority queue or similar ds to keep track of minimum distances
+
+> Steps
+1. Initialization
+    - distance to starting node = 0
+    - distance of infinity to all other nodes
+    - mark all nodes as unvisited
+
+2. Visit Nearest node
+    - select the unvisited node with smallest distance 
+    - mark this node as visited(not visting again)
+
+3. Update distance
+    - new_distance = current_node_distance + eddge weight to neighbor
+    - if new_distance < current_distance
+    - then current_distance = new_distance
+
+4. Repeat
+    - continur to visit the other unvisited node and Repeat
+
+5. End
+    - once all nodes are visited the shortest distance is finalized to all nodes
+
+- greedy technique becaues always chooses the vertex with smaller weight
+- O(v^2)
+- binary heap - O(E log v)
