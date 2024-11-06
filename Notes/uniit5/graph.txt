@@ -92,3 +92,63 @@ Similar For directed, except that only the edge that is leaving from the vertex 
 - greedy technique becaues always chooses the vertex with smaller weight
 - O(v^2)
 - binary heap - O(E log v)
+
+>> Minimum Spanning Tree 
+
+> Spanning Tree 
+- a connected, Acyclic tree which contain all vertices of the graph
+
+> Minimum Spanning Tree 
+- spanning tree with minimum weights
+- tree is Acyclic
+- spanning because it covers all vertices
+- minimum because of minimum weight
+
+> Application
+- handwriting analysis
+- cluster analysis
+- image segmentation
+
+>> Kruskal's Algortihm
+- joseph kruskal in 1956
+- greedy algorithm using rwuivalance
+- proecss edges in order of weights
+- add an edge to MST and combine 2 equivalent classes 
+
+> Application
+- tv network
+- tour operations
+- computer networking
+- routing algorithms
+
+>> Prims
+- used to find MST with shortest path first
+- treats the nodes as single trees and keeps on adding new tree to spanning tree from given graph
+
+Visited vertices S={a}
+
+Remaining verticesV/S ={b,c,d,e,f,g}
+
+Connected vertices A={}
+
+Lightest edges ={a,b}
+
+> algorithm
+1. This algorithm creates spanning tree with minimum weight from a
+given weighted graph.
+Begin
+
+2. Create edge list of given graph, with their weights.
+
+3. Draw all nodes to create skeleton for spanning tree.
+
+4. Select an edge with lowest weight and add it to skeleton and delete edge
+from edge list.
+
+5. Add other edges. While adding an edge take care that the one end of the
+edge should always be in the skeleton tree and its cost should be
+minimum.
+
+6. Repeat step 5 until n-1 edges are added.
+
+Return.
